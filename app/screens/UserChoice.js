@@ -5,7 +5,7 @@ import { Link } from 'react-router-native';
 import TopBar from '../components/TopBar';
 import Container from '../components/Container';
 import Content from '../components/Content';
-
+import ButtonLink from '../components/ButtonLink';
 
 class UserChoice extends Component {
   render() {
@@ -14,10 +14,9 @@ class UserChoice extends Component {
         <StatusBar translucent={false} />
         <Content>
           <Text> Selecciona que tipo de usuario prefieres. </Text>
-
-          <Link to='/UserDashboard' component={TouchableHighlight}>
-            <Text>User</Text>
-          </Link>
+          <Text> *Ambos llevan al usuario, no he creado la parte de transportista. </Text>
+          <ButtonLink url={'UserDashboard'} text={'Usuario Buscando transportista'} />
+          <ButtonLink url={'UserDashboard'} text={'Transportista buscando trabajo'} />
         </Content>
       </Container>
     );
