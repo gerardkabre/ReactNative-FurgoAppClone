@@ -11,7 +11,16 @@ const Router = createStackNavigator(
     newUserAd: NewUserAd
   },
   {
-    initialRouteName: 'userChoice'
+    initialRouteName: 'userChoice',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#FFC400'
+      },
+      headerTintColor: '#000',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      }
+    }
   }
 );
 

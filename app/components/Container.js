@@ -6,7 +6,7 @@ const Container = ({ children }) => <View style={styles.container}>{children}</V
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    paddingHorizontal: 10,
     backgroundColor: '#edece8',
     paddingVertical: 25,
   }
