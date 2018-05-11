@@ -1,9 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NativeRouter, Route, Link, Switch, Redirect } from 'react-router-native';
+
+import UserDashboard from './screens/UserDashboard';
 
 const Index = () => (
   <View style={styles.container}>
-    <Text>Open up App.js to start biiiiitch on your app!</Text>
+    <NativeRouter>
+      <Switch>
+        <Route path="/" component={UserDashboard} />
+      </Switch>
+    </NativeRouter>
   </View>
 );
 
@@ -16,4 +23,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Index; 
+export default Index;
