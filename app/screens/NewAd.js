@@ -10,10 +10,10 @@ class UserDashboard extends Component {
     return (
       <Container>
         <StatusBar translucent={false} />
-        <TopBar title={'Mis anuncios'} firstActon={'settings'} secondAction={'new'} />
+        <TopBar title={'Nuevo anuncio'} firstActon={'cancelar'} secondAction={'Publicar'} />
         <Content>
-          <Text> No hay ningún anuncio en tu panel, puedes publicar uno pulsando en el botón. </Text>
-          <ButtonLink url={'NewAd'} text={'Publicar anuncio'}/>
+         
+          <ButtonLink url={''} text={'user choice again'}/>
         </Content>
       </Container>
     );

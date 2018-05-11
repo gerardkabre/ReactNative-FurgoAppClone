@@ -1,26 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import { NativeRouter, Route, Link, Switch, Redirect } from 'react-router-native';
 
 import UserDashboard from './screens/UserDashboard';
+import UserChoice from './screens/UserChoice';
+import NewAd from './screens/NewAd';
 
 const Index = () => (
-  <View style={styles.container}>
-    <NativeRouter>
-      <Switch>
-        <Route path="/" component={UserDashboard} />
-      </Switch>
-    </NativeRouter>
-  </View>
+  <NativeRouter>
+    <Switch>
+      <Route exact path="/" component={UserChoice} />
+      <Route path="/UserDashboard" component={UserDashboard} />
+      <Route path="/NewAd" component={NewAd} />
+    </Switch>
+  </NativeRouter>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
 
 export default Index;
