@@ -1,6 +1,6 @@
 import React from 'react';
-import Router from './config/Navigation';
+import RootStack from './config/Navigation';
 
-const Index = () => <Router />;
+const Index = () => <RootStack />;
 
 export default Index;

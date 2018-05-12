@@ -1,19 +1,19 @@
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createSwitchNavigator } from 'react-navigation';
 
 import UserChoice from '../screens/UserChoice';
 import UserDashboard from '../screens/UserDashboard';
 import NewUserProject from '../screens/NewUserProject';
+import AuthLoading from '../screens/AuthLoading';
+import SignIn from '../screens/SignIn';
 
-const Router = createStackNavigator(
+const AppStack = createStackNavigator(
   {
-    userChoice: UserChoice,
-    userDashboard: UserDashboard,
+    UserDashboard: UserDashboard,
     NewUserProject: NewUserProject
   },
   {
     initialRouteName: 'userChoice',
     navigationOptions: {
-      
       headerStyle: {
         backgroundColor: '#FFC400'
       },
@@ -25,4 +25,20 @@ const Router = createStackNavigator(
   }
 );
 
-export default Router;
+const AuthStack = createStackNavigator({
+  UserChoice: UserChoice,
+  SignIn: SignIn
+});
+
+const RootStack = createSwitchNavigator(
+  {
+    AuthLoading: AuthLoading,
+    App: AppStack,
+    Auth: AuthStack
+  },
+  {
+    initialRouteName: 'AuthLoading'
+  }
+);
+
+export default RootStack;

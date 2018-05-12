@@ -18,8 +18,8 @@ class UserChoice extends Component {
           <BackgroundText small text="*Ambos llevan al usuario, no he creado la parte de transportista." />
         </View>
         <View style={styles.contentBlock}>
-          <ButtonLarge text="Usuario Individual" handlePress={() => this.props.navigation.navigate('userDashboard')} />
-          <ButtonLarge text="Transportista" handlePress={() => this.props.navigation.navigate('userDashboard')} />
+          <ButtonLarge text="Usuario Individual" handlePress={() => this.props.navigation.navigate('SignIn')} />
+          <ButtonLarge text="Transportista" handlePress={() => this.props.navigation.navigate('SignIn')} />
         </View>
       </Container>
     );
