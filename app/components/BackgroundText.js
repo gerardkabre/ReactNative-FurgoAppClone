@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: '600',
     color: '#8b9cb7',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: 20
   },
   big: {
     fontSize: 20

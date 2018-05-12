@@ -5,6 +5,13 @@ import UserDashboard from '../screens/UserDashboard';
 import NewUserProject from '../screens/NewUserProject';
 import AuthLoading from '../screens/AuthLoading';
 import SignIn from '../screens/SignIn';
+import SignUp from '../screens/SignUp';
+
+const AuthStack = createStackNavigator({
+  UserChoice: UserChoice,
+  SignIn: SignIn,
+  SignUp: SignUp
+});
 
 const AppStack = createStackNavigator(
   {
@@ -12,7 +19,7 @@ const AppStack = createStackNavigator(
     NewUserProject: NewUserProject
   },
   {
-    initialRouteName: 'userChoice',
+    initialRouteName: 'UserDashboard',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#FFC400'
@@ -25,16 +32,11 @@ const AppStack = createStackNavigator(
   }
 );
 
-const AuthStack = createStackNavigator({
-  UserChoice: UserChoice,
-  SignIn: SignIn
-});
-
 const RootStack = createSwitchNavigator(
   {
     AuthLoading: AuthLoading,
-    App: AppStack,
-    Auth: AuthStack
+    Auth: AuthStack,
+    App: AppStack
   },
   {
     initialRouteName: 'AuthLoading'
