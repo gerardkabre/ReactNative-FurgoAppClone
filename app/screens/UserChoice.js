@@ -3,16 +3,19 @@ import { Text, View, StyleSheet, StatusBar, TouchableHighlight, Button } from 'r
 
 import Container from '../components/Container';
 import ButtonLarge from '../components/ButtonLarge';
+import BackgroundText from '../components/BackgroundText';
 
 class UserChoice extends Component {
+  static navigationOptions = { header: null };
+
   render() {
     return (
       <Container>
         <StatusBar translucent={false} />
 
         <View style={styles.contentBlock}>
-          <Text> Selecciona que tipo de usuario prefieres. </Text>
-          <Text> *Ambos llevan al usuario, no he creado la parte de transportista. </Text>
+          <BackgroundText text="Selecciona que tipo de usuario prefieres." />
+          <BackgroundText small text="*Ambos llevan al usuario, no he creado la parte de transportista." />
         </View>
         <View style={styles.contentBlock}>
           <ButtonLarge text="Usuario Individual" handlePress={() => this.props.navigation.navigate('userDashboard')} />

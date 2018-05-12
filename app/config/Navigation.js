@@ -2,17 +2,18 @@ import { createStackNavigator } from 'react-navigation';
 
 import UserChoice from '../screens/UserChoice';
 import UserDashboard from '../screens/UserDashboard';
-import NewUserAd from '../screens/NewUserAd';
+import NewUserProject from '../screens/NewUserProject';
 
 const Router = createStackNavigator(
   {
     userChoice: UserChoice,
     userDashboard: UserDashboard,
-    newUserAd: NewUserAd
+    NewUserProject: NewUserProject
   },
   {
     initialRouteName: 'userChoice',
     navigationOptions: {
+      
       headerStyle: {
         backgroundColor: '#FFC400'
       },

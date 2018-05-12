@@ -3,7 +3,7 @@ import { Text, View, Button, StyleSheet, StatusBar } from 'react-native';
 
 import Container from '../components/Container';
 
-class NewUserAd extends Component {
+class NewUserProject extends Component {
   static navigationOptions = {
     title: 'Nuevo Anuncio',
     
@@ -20,4 +20,4 @@ class NewUserAd extends Component {
   }
 }
 
-export default NewUserAd;
+export default NewUserProject;
