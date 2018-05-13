@@ -5,27 +5,23 @@ import Container from '../components/Container';
 import ButtonLarge from '../components/ButtonLarge';
 import Title from '../components/Title';
 
-class UserChoice extends Component {
+class AuthChoice extends Component {
   static navigationOptions = { header: null };
 
   render() {
     return (
-      <Container video>
+      <Container yellow>
         <View style={styles.contentBlock}>
-          <Title text="Hola, soy Gerard." />
+          <Title black text="Envía cosas al mejor precio." />
         </View>
         <View style={styles.contentBlock}>
-          <Title small text="Ambos llevan a usuario y no a transportista." />
+          <Title black small text="Clon de Furgo" />
         </View>
         <View style={styles.contentBlock}>
           <ButtonLarge
-            yellow
-            text="Busco un transportista"
-            handlePress={() => this.props.navigation.navigate('AuthChoice')}
-          />
-          <ButtonLarge 
-            text="Soy un transportista" 
-            handlePress={() => this.props.navigation.navigate('AuthChoice')}
+            black
+            text="Entrar con Email"
+            handlePress={() => this.props.navigation.navigate('SignIn')}
           />
         </View>
       </Container>
@@ -39,4 +35,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default UserChoice;
+export default AuthChoice;

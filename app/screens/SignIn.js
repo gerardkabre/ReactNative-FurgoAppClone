@@ -6,7 +6,14 @@ import Container from '../components/Container';
 
 class SignIn extends React.Component {
   static navigationOptions = {
-    title: 'Acceder'
+    title: 'Acceder',
+    headerStyle: {
+      backgroundColor: '#FFC400'
+    },
+    headerTintColor: '#000',
+    headerTitleStyle: {
+      fontWeight: 'bold'
+    }
   };
 
   state = {
@@ -53,6 +60,9 @@ class SignIn extends React.Component {
   }
 }
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'yellow'
+  },
   input: {
     borderBottomColor: '#1E88E5',
     borderBottomWidth: 1,

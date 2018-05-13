@@ -6,9 +6,11 @@ import NewUserProject from '../screens/NewUserProject';
 import AuthLoading from '../screens/AuthLoading';
 import SignIn from '../screens/SignIn';
 import SignUp from '../screens/SignUp';
+import AuthChoice from '../screens/AuthChoice';
 
 const AuthStack = createStackNavigator({
   UserChoice: UserChoice,
+  AuthChoice: AuthChoice,
   SignIn: SignIn,
   SignUp: SignUp
 });
