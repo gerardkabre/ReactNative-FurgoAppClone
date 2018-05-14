@@ -50,13 +50,13 @@ class SignIn extends React.Component {
           label="nombre"
           value={this.state.nombre}
           onChange={this.onChange}
-          placeholder="pudes usar: admin"
+          placeholder="puedes usar: admin"
         />
         <FormInput
           label="contraseña"
           value={this.state.contraseña}
           onChange={this.onChange}
-          placeholder="pudes usar: pass"
+          placeholder="puedes usar: password"
         />
         <Separator />
         <BackgroundText text="¿No tienes cuenta?" />

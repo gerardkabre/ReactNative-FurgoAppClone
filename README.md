@@ -1,16 +1,23 @@
+## Furgo App clone by Gerard Cabrerizo 
+This is a simple clone of the furgo app built using: 
+
+* react-native
+* redux, react-redux, redux-thunk, redux-logger
+* react-navigation
+* react-native-video 
+* react-native-navigation-actions*
+
+And for the backend: 
+
+* aws-amplify, aws-amplify-react-native
+* amazon cognito 
+
+Bootrsapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
+
 
 
 * ##react-native-navigation-actions:  
-To be able to navigate through react-navigation within a Redux action without having to integrate react-navigation to redux. 
+Used to be able to navigate within a Redux action without having to integrate react-navigation and redux together. 
 
 
-## Table of Contents
 
-This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
-* [Updating to New Releases](#updating-to-new-releases)
-* [Available Scripts](#available-scripts)
-  * [npm start](#npm-start)
-  * [npm test](#npm-test)
-  * [npm run ios](#npm-run-ios)
-  * [npm run android](#npm-run-android)
-  * [npm run eject](#npm-run-eject)
