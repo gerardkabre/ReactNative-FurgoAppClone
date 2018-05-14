@@ -34,5 +34,5 @@ Used to be able to navigate within a Redux action without having to integrate re
 ## Screens 
 `<./app/screens/UserChoice>`
 
-![home](https://i.imgur.com/ay6BUuD.png)
+![home](https://i.imgur.com/ay6BUuD.png  | width=400)
 
