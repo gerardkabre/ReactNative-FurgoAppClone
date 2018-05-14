@@ -28,13 +28,27 @@ Bootrsapped with [Create React Native App](https://github.com/react-community/cr
 
 
 
-* ##react-native-navigation-actions:  
+*react-native-navigation-actions:  
 Used to be able to navigate within a Redux action without having to integrate react-navigation and redux together. 
 
 ## Screens 
-`<./app/screens/UserChoice>`
 
-![home](https://i.imgur.com/ay6BUuD.png  | width=400)
-<img src="https://i.imgur.com/ay6BUuD.png" width="48">
+`<./app/screens/UserChoice>`
+<img src="https://i.imgur.com/ay6BUuD.png" width="400">
+
+`<./app/screens/AuthChoice>`
+<img src="https://i.imgur.com/Pv5pELQ.png" width="400">
+
+`<./app/screens/SignIn>`
+<img src="https://i.imgur.com/OlJd7bm.png" width="400">
+
+`<./app/screens/SignUp>`
+<img src="https://i.imgur.com/3qOkV1d.png" width="400">
+
+`<./app/screens/UserDashboard>`
+<img src="https://i.imgur.com/BVoo1G6.png" width="400">
+
+`<./app/screens/NewUserProject>`
+<img src="https://i.imgur.com/OxkWMyV.png" width="400">
 
 
