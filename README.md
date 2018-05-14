@@ -11,7 +11,7 @@ Then once the dashboard is mounted dispatch a redux action that fetches the data
 Then the reducer saves that data into the state and it's rendered to the dashboard through props from that connected screen. 
 
 
- built using: 
+ Built using: 
 
 * react-native
 * redux, react-redux, redux-thunk, redux-logger
@@ -33,22 +33,25 @@ Used to be able to navigate within a Redux action without having to integrate re
 
 ## Screens 
 
-`<./app/screens/UserChoice>`
+`./app/screens/UserChoice`
 <img src="https://i.imgur.com/ay6BUuD.png" width="250">
 ***
-`<./app/screens/AuthChoice>`
+`./app/screens/AuthChoice`
 <img src="https://i.imgur.com/Pv5pELQ.png" width="250">
 ***
-`<./app/screens/SignIn>`
+`./app/screens/SignIn`
 <img src="https://i.imgur.com/OlJd7bm.png" width="250">
 ***
-`<./app/screens/SignUp>`
+`./app/screens/SignUp`
 <img src="https://i.imgur.com/3qOkV1d.png" width="250">
 ***
-`<./app/screens/UserDashboard>`
+`./app/screens/UserDashboard`
 <img src="https://i.imgur.com/BVoo1G6.png" width="250">
 ***
-`<./app/screens/NewUserProject>`
+`./app/screens/NewUserProject`
 <img src="https://i.imgur.com/OxkWMyV.png" width="250">
 ***
 
+## Run the app locally 
+Use the app with expo:
+in the root foloder `./` -> `yarn` to install and then `npm start` 
