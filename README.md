@@ -34,21 +34,21 @@ Used to be able to navigate within a Redux action without having to integrate re
 ## Screens 
 
 `<./app/screens/UserChoice>`
-<img src="https://i.imgur.com/ay6BUuD.png" width="400">
+<img src="https://i.imgur.com/ay6BUuD.png" width="250">
 
 `<./app/screens/AuthChoice>`
-<img src="https://i.imgur.com/Pv5pELQ.png" width="400">
+<img src="https://i.imgur.com/Pv5pELQ.png" width="250">
 
 `<./app/screens/SignIn>`
-<img src="https://i.imgur.com/OlJd7bm.png" width="400">
+<img src="https://i.imgur.com/OlJd7bm.png" width="250">
 
 `<./app/screens/SignUp>`
-<img src="https://i.imgur.com/3qOkV1d.png" width="400">
+<img src="https://i.imgur.com/3qOkV1d.png" width="250">
 
 `<./app/screens/UserDashboard>`
-<img src="https://i.imgur.com/BVoo1G6.png" width="400">
+<img src="https://i.imgur.com/BVoo1G6.png" width="250">
 
 `<./app/screens/NewUserProject>`
-<img src="https://i.imgur.com/OxkWMyV.png" width="400">
+<img src="https://i.imgur.com/OxkWMyV.png" width="250">
 
 
