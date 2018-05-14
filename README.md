@@ -1,6 +1,6 @@
 ## Furgo App clone with React Native by Gerard Cabrerizo 
 
-![Video of hte app](https://gfycat.com/HomelyCompassionateDutchshepherddog)
+![Video of the app](https://thumbs.gfycat.com/HomelyCompassionateDutchshepherddog-size_restricted.gif)
 
 This is a simple clone of the furgo app, simlulating the landing page choosing type of user -> type of auth, and login in or creating a new user. 
 Once logged in, goes to the user dashboard, where it can see its projects or create a new one. 
@@ -34,5 +34,5 @@ Used to be able to navigate within a Redux action without having to integrate re
 ## Screens 
 `<./app/screens/UserChoice>`
 
-![home](https://imgur.com/ay6BUuD)
+![home](https://i.imgur.com/ay6BUuD.png)
 
