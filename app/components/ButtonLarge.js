@@ -3,14 +3,22 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 const ButtonLarge = ({ text, handlePress, yellow, blue, black }) => (
   <TouchableOpacity
-    style={[styles.ButtonContainer, 
-      blue ? styles.blue 
-      : yellow ? styles.yellow 
-      : black ? styles.black : styles.white]}
+    style={[
+      styles.ButtonContainer,
+      blue
+        ? styles.blue
+        : yellow
+          ? styles.yellow
+          : black
+            ? styles.black
+            : styles.white
+    ]}
     onPress={() => handlePress()}
     underlayColor="#fff"
   >
-    <Text style={[styles.ButtonText, black || blue ? styles.whiteText : null]}>{text}</Text>
+    <Text style={[styles.ButtonText, black || blue ? styles.whiteText : null]}>
+      {text}
+    </Text>
   </TouchableOpacity>
 );
 

@@ -1,21 +1,33 @@
 import React from 'react';
-import { ActivityIndicator, AsyncStorage, StatusBar, StyleSheet, View } from 'react-native';
+import Auth from 'aws-amplify';
+
+import {
+  ActivityIndicator,
+  AsyncStorage,
+  StatusBar,
+  StyleSheet,
+  View
+} from 'react-native';
 
 class AuthLoading extends React.Component {
   constructor(props) {
     super(props);
-    this.bootstrapAsync();
+    this.checkLogin();
   }
 
-  bootstrapAsync = async () => {
-    const userToken = await AsyncStorage.getItem('userToken');
-    // this.props.navigation.navigate(userToken ? 'App' : 'Auth');
-    this.props.navigation.navigate('Auth');
+  checkLogin = async () => {
+    try {
+      const user = await Auth.currentAuthenticatedUser()
+      this.props.navigation.navigate('App');  
+    } catch (err){
+      this.props.navigation.navigate('Auth');  
+    }
+    
   };
 
   render() {
     return (
-      <View >
+      <View>
         <ActivityIndicator />
         <StatusBar barStyle="default" />
       </View>

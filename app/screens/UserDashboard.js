@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, StatusBar, Button } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 
 import Container from '../components/Container';
 import ButtonLarge from '../components/ButtonLarge';
@@ -17,7 +17,11 @@ class UserDashboard extends Component {
         <View style={styles.contentBlock}>
           <BackgroundText text=" No hay ningún anuncio en tu panel, puedes publicar uno pulsando en el botón." />
         </View>
-        <ButtonLarge text="Publicar anuncio" handlePress={() => this.props.navigation.navigate('NewUserProject')} />
+        <ButtonLarge
+          blue
+          text="Publicar anuncio"
+          handlePress={() => this.props.navigation.navigate('NewUserProject')}
+        />
       </Container>
     );
   }
@@ -28,7 +32,6 @@ const styles = StyleSheet.create({
     flex: 8,
     justifyContent: 'center'
   }
-  
 });
 
 export default UserDashboard;

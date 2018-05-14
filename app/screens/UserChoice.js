@@ -23,8 +23,8 @@ class UserChoice extends Component {
             text="Busco un transportista"
             handlePress={() => this.props.navigation.navigate('AuthChoice')}
           />
-          <ButtonLarge 
-            text="Soy un transportista" 
+          <ButtonLarge
+            text="Soy un transportista"
             handlePress={() => this.props.navigation.navigate('AuthChoice')}
           />
         </View>

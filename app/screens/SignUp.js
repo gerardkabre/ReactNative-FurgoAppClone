@@ -1,63 +1,66 @@
 import React from 'react';
-import { View, Button, AsyncStorage, TextInput, StyleSheet } from 'react-native';
-import { Auth } from 'aws-amplify';
-import ButtonLarge from '../components/ButtonLarge';
-import Container from '../components/Container';
+import {
+  View,
+  Button,
+  AsyncStorage,
+  TextInput,
+  StyleSheet
+} from 'react-native';
 
-class SignIn extends React.Component {
-  static navigationOptions = {
-    title: 'Crea tu cuenta'
+import { Auth } from 'aws-amplify';
+
+import Separator from '../components/Separator';
+import BackgroundText from '../components/BackgroundText';
+import FormInput from '../components/FormInput';
+import FormClickable from '../components/FormClickable';
+
+class SignUp extends React.Component {
+  static navigationOptions = ({ navigation }) => {
+    const { params } = navigation.state;
+    return {
+      headerRight: <Button title="Crear" onPress={() => params.signIn()} />,
+      title: 'Crea tu cuenta'
+    };
   };
 
   state = {
-    userName: '',
+    username: '',
     password: ''
   };
 
-  onChangeText = (key, value) => this.setState({ [key]: value });
+  componentDidMount() {
+    this.props.navigation.setParams({ signIn: () => this.signUp() });
+  }
+
+  onChange = (key, value) => this.setState({ [key]: value });
 
   signUp = () => {
     Auth.signUp({
       username: this.state.userName,
       password: this.state.password
     })
-      .then(() => console.log('signup Successful!'))
+      .then(res => {
+        this.props.navigation.navigate('SignIn');
+      })
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <Container>
-        <View style={styles.inputs}>
-          <TextInput
-            style={styles.input}
-            onChangeText={value => this.onChangeText('userName', value)}
-            value={this.state.userName}
-            placeholder="username"
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={value => this.onChangeText('password', value)}
-            value={this.state.password}
-            placeholder="password"
-          />
-        </View>
-        <ButtonLarge text="Enviar" handlePress={this.signUp} />
-      </Container>
+      <View>
+        <FormInput
+          label="nombre"
+          value={this.state.username}
+          onChange={value => this.onChange('name', value)}
+        />
+        <FormInput
+          label="Contraseña"
+          value={this.state.password}
+          onChange={value => this.onChange('password', value)}
+        />
+      </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  input: {
-    borderBottomColor: '#1E88E5',
-    borderBottomWidth: 1,
-    height: 50,
-    marginBottom: 10
-  },
-  inputs: {
-    marginBottom: 30
-  }
-});
-
-export default SignIn;
+export default SignUp;

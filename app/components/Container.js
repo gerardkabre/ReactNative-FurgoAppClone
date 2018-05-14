@@ -9,11 +9,21 @@ const Container = ({ children, yellow, video }) => {
   if (video)
     return (
       <View style={styles.container}>
-        <Video source={{ uri: videoUrl }} resizeMode="cover" shouldPlay isLooping style={StyleSheet.absoluteFill} />
+        <Video
+          source={{ uri: videoUrl }}
+          resizeMode="cover"
+          shouldPlay
+          isLooping
+          style={StyleSheet.absoluteFill}
+        />
         {children}
       </View>
     );
-  return <View style={[styles.container, yellow ? styles.bgYellow : null]}>{children}</View>;
+  return (
+    <View style={[styles.container, yellow ? styles.bgYellow : null]}>
+      {children}
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({

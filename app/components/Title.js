@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import { Text, StyleSheet } from 'react-native';
 
 const Title = ({ text, black, small }) => {
-  return <Text style={[styles.text, 
-    black ? styles.black : styles.white,
-    small ? styles.small : null]}>
-    {text}
-    </Text>;
+  return (
+    <Text
+      style={[
+        styles.text,
+        black ? styles.black : styles.white,
+        small ? styles.small : null
+      ]}
+    >
+      {text}
+    </Text>
+  );
 };
 
 const styles = StyleSheet.create({

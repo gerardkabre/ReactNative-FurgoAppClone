@@ -6,7 +6,10 @@ import ButtonLarge from '../components/ButtonLarge';
 import Title from '../components/Title';
 
 class AuthChoice extends Component {
-  static navigationOptions = { header: null };
+  static navigationOptions = {
+    header: null,
+    headerBackTitle: 'Cancelar'
+  };
 
   render() {
     return (

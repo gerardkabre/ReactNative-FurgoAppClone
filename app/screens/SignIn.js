@@ -1,76 +1,78 @@
 import React from 'react';
-import { View, Button, AsyncStorage, TextInput, StyleSheet } from 'react-native';
-import { Auth } from 'aws-amplify';
-import ButtonLarge from '../components/ButtonLarge';
-import Container from '../components/Container';
+import { View, Button, ActivityIndicator } from 'react-native';
+
+import Separator from '../components/Separator';
+import BackgroundText from '../components/BackgroundText';
+import FormInput from '../components/FormInput';
+import FormClickable from '../components/FormClickable';
+import Loading from '../components/Loading';
+
+import { connect } from 'react-redux';
+
+import { logIn } from '../actions/user';
 
 class SignIn extends React.Component {
-  static navigationOptions = {
-    title: 'Acceder',
-    headerStyle: {
-      backgroundColor: '#FFC400'
-    },
-    headerTintColor: '#000',
-    headerTitleStyle: {
-      fontWeight: 'bold'
-    }
+  static navigationOptions = ({ navigation }) => {
+    return {
+      headerRight: (
+        <Button
+          title="Enviar"
+          onPress={() => navigation.state.params.signIn()}
+        />
+      ),
+      title: 'Entrar con email'
+    };
   };
 
   state = {
-    username: '',
-    password: ''
+    nombre: '',
+    contraseña: ''
   };
 
-  onChangeText = (key, value) => this.setState({ [key]: value });
+  componentDidMount() {
+    this.props.navigation.setParams({ signIn: () => this.signIn() });
+  }
+
+  onChange = (key, value) => this.setState({ [key]: value });
 
   signIn = () => {
-    console.log(this.state.password);
-    console.log(this.state.username);
-    Auth.signIn(this.state.username, this.state.password)
-      .then(res => {
-        console.log(res);
-        this.props.navigation.navigate('App');
-      })
-      .catch(err => console.log(err));
+    this.props.dispatch(
+      logIn({ username: this.state.nombre, password: this.state.contraseña })
+    );
   };
 
-  // await AsyncStorage.setItem('userToken', 'abc');
-
   render() {
+    if (this.props.loginRequest) return <Loading />;
     return (
-      <Container>
-        <View style={styles.inputs}>
-          <TextInput
-            style={styles.input}
-            onChangeText={value => this.onChangeText('username', value)}
-            value={this.state.username}
-            placeholder="puedes usar: 'gerard'"
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={value => this.onChangeText('password', value)}
-            value={this.state.password}
-            placeholder="contraseña: 'gerard'"
-          />
-        </View>
-        <ButtonLarge text="Acceder" handlePress={this.signIn} />
-        <ButtonLarge text="Crear cuenta" handlePress={() => this.props.navigation.navigate('SignUp')} />
-      </Container>
+      <View>
+        <Separator />
+        <FormInput
+          label="nombre"
+          value={this.state.nombre}
+          onChange={this.onChange}
+          placeholder="pudes usar: admin"
+        />
+        <FormInput
+          label="contraseña"
+          value={this.state.contraseña}
+          onChange={this.onChange}
+          placeholder="pudes usar: pass"
+        />
+        <Separator />
+        <BackgroundText text="¿No tienes cuenta?" />
+        <FormClickable
+          label="ir a crear cuenta"
+          handlePress={() => this.props.navigation.navigate('SignUp')}
+        />
+      </View>
     );
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'yellow'
-  },
-  input: {
-    borderBottomColor: '#1E88E5',
-    borderBottomWidth: 1,
-    height: 50,
-    marginBottom: 10
-  },
-  inputs: {
-    marginBottom: 30
-  }
-});
-export default SignIn;
+
+const mapStateToProps = state => {
+  return {
+    loginRequest: state.user.request
+  };
+};
+
+export default connect(mapStateToProps)(SignIn);
