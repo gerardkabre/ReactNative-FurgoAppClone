@@ -1,0 +1,59 @@
+{
+	"projectPath": "/Users/Kabre/Downloads/code/-",
+	"projectInfo": {
+		"ProjectName": "-",
+		"ProjectPath": "/Users/Kabre/Downloads/code/-",
+		"InitializationTime": "",
+		"LastConfigurationTime": "",
+		"LastNPMInstallTime": "",
+		"FrontendLastBuildTime": "",
+		"LastPublishTime": "",
+		"BackendLastSyncTime": "",
+		"BackendLastBuildTime": "",
+		"BackendLastPushTime": "",
+		"BackendProjectID": "",
+		"BackendProjectName": "",
+		"BackendProjectConsoleUrl": "",
+		"BackendProjectCreationTime": "",
+		"BackendProjectLastUpdatedTime": "",
+		"Framework": "react-native"
+	},
+	"packageJson": {
+		"name": "my-awesome-app",
+		"version": "0.1.0",
+		"private": true,
+		"devDependencies": {
+			"react-native-scripts": "1.14.0",
+			"jest-expo": "~27.0.0",
+			"react-test-renderer": "16.3.1"
+		},
+		"main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+		"scripts": {
+			"start": "react-native-scripts start",
+			"eject": "react-native-scripts eject",
+			"android": "react-native-scripts android",
+			"ios": "react-native-scripts ios",
+			"test": "jest"
+		},
+		"jest": {
+			"preset": "jest-expo"
+		},
+		"dependencies": {
+			"expo": "^27.0.1",
+			"react": "16.3.1",
+			"react-dom": "^16.3.2",
+			"react-native": "~0.55.2",
+			"react-navigation": "^2.0.1",
+			"react-redux": "^5.0.7",
+			"react-router": "^4.2.0",
+			"react-router-native": "^4.2.0",
+			"react-transition-group": "^2.3.1",
+			"redux": "^4.0.0",
+			"redux-logger": "^3.0.6",
+			"redux-thunk": "^2.2.0"
+		}
+	},
+	"framework": "react-native",
+	"initialStage": "clean-slate",
+	"strategy": "create"
+}
