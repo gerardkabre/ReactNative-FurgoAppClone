@@ -31,5 +31,8 @@ Bootrsapped with [Create React Native App](https://github.com/react-community/cr
 * ##react-native-navigation-actions:  
 Used to be able to navigate within a Redux action without having to integrate react-navigation and redux together. 
 
+## Screens 
+`<./app/screens/UserChoice>`
 
+![home](https://imgur.com/ay6BUuD)
 
