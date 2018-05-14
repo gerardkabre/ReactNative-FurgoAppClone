@@ -1,6 +1,6 @@
 ## Furgo App clone with React Native by Gerard Cabrerizo 
 
-
+![Video of hte app](https://media.giphy.com/media/5tvWqP3sVKNDQYuYUy/giphy.gif)
 
 This is a simple clone of the furgo app, simlulating the landing page choosing type of user -> type of auth, and login in or creating a new user. 
 Once logged in, goes to the user dashboard, where it can see its projects or create a new one. 
