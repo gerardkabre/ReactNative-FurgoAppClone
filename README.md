@@ -1,4 +1,4 @@
-## Furgo App clone with React Native by Gerard Cabrerizo 
+## Furgo App clone with React Native  
 
 ![Video of the app](https://thumbs.gfycat.com/HomelyCompassionateDutchshepherddog-size_restricted.gif)
 
